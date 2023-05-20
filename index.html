@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Xavi.py | about me</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./bg.css">
+
+</head>
+
+
+
+<body class="bg-black flex justify-center items-center h-screen">
+
+    <div id="clickHere" class="z-10 absolute inset-0 flex justify-center items-center bg-black opacity-100 transition-opacity duration-500" style="z-index: 2;">
+        <span class="text-gray-200 animate-pulse">Click Here!</span>
+    </div>
+
+    <div class="w-full h-full absolute z-0">
+        <video id="myVideo" loop class="w-full h-full object-cover brightness-50" src="./assets/video.mp4"></video>
+        <audio src="./assets/video.mp4" id="myAudio"></audio>
+    </div>
+    <div class="bg-animation">
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div id="stars4"></div>
+</div>
+    <div class="text-white z-0">
+
+       <div class="bg-black/90 w-[450px] rounded-lg	 shadow-lg flex flex-col justify-between">
+       <img class="w-full rounded-lg	opacity-50" src="https://cdn.discordapp.com/attachments/1092626439351828571/1108991920954409021/pfps-PGICeE.gif" alt="">
+         <div class="flex  ml-6  justify-between">
+            <img src="./assets/pfp (1).png" alt="Placeholder" class="-mt-[55px] flex w-28 border-4 border-zinc-900 mx-auto rounded-full ml-0">
+
+
+           <div class="pt-4 flex pr-5">
+            <a class="" href="https://github.com/j3qn"><i class="text-gray-200 hover:text-white text-normal fa-brands fa-github"></i></a>
+            <a class="pl-4" href="https://twitter.com/j3qn"><i class="text-gray-200 hover:text-white text-normal fa-brands fa-twitter"></i></a>
+            <a class="pl-4" href="https://discord.gg/support"><i class="text-gray-200 hover:text-white text-normal fa-brands fa-discord"></i></a>
+           </div>
+           
+        
+          
+       
+        </div>
+       
+        <div class=" flex flex-col h-full mb-2 mt-4">
+          <div class="pl-6 flex items-center">
+            <h3 class="text-2xl font-semibold text-white">Xavi.py</h3>
+
+       
+          </div>
+          <p class="pl-6 text-gray font-light">Python & C# Developer </p>
+
+
+          <img class="px-4" src="https://lanyard.cnrad.dev/api/1084906962535329932?bg=transparent " alt="">
+         
+        </div>
+      </div>
+       
+    </div>
+
+    <script>
+        document.getElementById("clickHere").addEventListener("click", function() {
+            document.getElementById("clickHere").classList.add("opacity-0");
+            setTimeout(function() {
+                document.getElementById("clickHere").style.display = "none";
+                var myVideo = document.getElementById("myVideo");
+                myVideo.volume = 0.3;
+                myVideo.play();
+                document.getElementById("myAudio").play();
+                
+            }, 500);
+        });
+
+        document.getElementById("myVideo").addEventListener("loadedmetadata", function() {
+            document.getElementById("myVideo").volume = 0.2;
+        });
+    </script>
+</body>
+
+</html>
